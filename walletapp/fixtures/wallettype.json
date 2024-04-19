@@ -1,0 +1,1 @@
+[{"model": "walletapp.wallettype", "pk": 1, "fields": {"name": "GiftCard"}}, {"model": "walletapp.wallettype", "pk": 2, "fields": {"name": "Money"}}]
