@@ -17,14 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-
+from django.shortcuts import redirect
 class MyFormView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
 
+def my_view(request):
+    return redirect('Dashboard')
+
 urlpatterns = [
+    path('', my_view, name='frontend'),
     path('wallet/', MyFormView.as_view(), name='Dashboard'),
     path('wallet/admin/', admin.site.urls),
     path('wallet/api/', include('walletapp.urls'))
