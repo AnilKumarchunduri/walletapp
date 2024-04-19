@@ -100,6 +100,7 @@ payload :
 Example : http://localhost:8012/wallet/api/transaction/credit/
 ```
 ##Debit money to the wallet
+MINIMUM WALLET BALANCE value is set to 1000 and it can configurable in settings.py file
 ```
 Method : POST
 End Point : /wallet/api/transaction/debit/
