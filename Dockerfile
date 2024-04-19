@@ -18,6 +18,12 @@ RUN npm install; npm run build
 
 RUN pip install -r requirement.txt
 
+RUN python manage.py makemigrations
+
+RUN python manage.py makemigrations walletapp
+
+RUN python manage.py migrate
+
 EXPOSE 8012
 
 ENTRYPOINT ["python3","manage.py", "runserver","0:8012"]
